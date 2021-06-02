@@ -1,0 +1,550 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    line-height: 1.75;
+    font-family: "Inter", sans-serif;
+    color: #111;
+}
+
+/* HEADER */
+.nikeHeader{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index:20;
+}
+
+.nikeHeader .navbar-brand img {
+    width: 60px;
+}
+.nikeHeader .navbar-light .navbar-nav .nav-item{
+    border-bottom: 2px solid transparent;
+    font-weight: 700;
+    transition: all .2s;
+}
+.nikeHeader .navbar-light .navbar-nav .nav-item:hover{
+    border-bottom-color: #111;
+   
+}
+.nikeHeader .navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+.nikeHeader .navbar-light .navbar-nav .nav-link:focus, .nikeHeader .navbar-light .navbar-nav .nav-link:hover{
+    color: #111;
+}
+.nikeHeader__shopping{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;   
+    display: block;
+    transition: all .5s;
+}
+.nikeHeader__shopping:hover{
+    background-color: #e5e5e5;
+    color: #111;
+}
+
+/* SIDEBAR */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+   
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #111;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .overlay3 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index:15;
+    top: 0;
+    left: 0;
+    background-color: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+/* CAROUSEL */
+.nikeCarousel .carousel-item {
+    height: 100vh;
+}
+
+.nikeCarousel .carousel-indicators li{
+    width: 5vw;
+    height: 4vw;
+    text-indent: 0;
+    background-color: transparent;
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+    
+}
+.nikeCarousel .carousel-indicators li img{
+    filter: grayscale(100%);
+    transform: rotate(-45deg);
+    transition: all .5s;
+}
+.nikeCarousel .carousel-indicators li.active,.nikeCarousel .carousel-indicators li:hover{
+    transform: translateY(-10px);
+    border-bottom-color: #111;
+}
+.nikeCarousel .carousel-indicators li:hover img{
+    filter: grayscale(0);
+    
+}
+
+.nikeCarousel .carousel-indicators li.active img{
+    filter: grayscale(0);
+    
+}
+
+.nikeCarousel .carousel-item:first-child {
+    background: rgb(255, 95, 109);
+    background: linear-gradient(225deg, rgba(255, 95, 109, 1), rgba(255, 176, 137, 1));
+}
+
+.nikeCarousel .carousel-item:nth-child(2) {
+    background: rgb(99, 155, 48);
+    background: linear-gradient(225deg, rgba(99, 155, 48, 1), rgba(202, 239, 121, 1));
+}
+
+.nikeCarousel .carousel-item:nth-child(3) {
+    background: #4765ad;
+    background: linear-gradient(225deg, #22264f, #4765ad);
+}
+/* .nikeCarousel .carousel-item:nth-child(4) {
+    background: rgb(255, 95, 109);
+    background: linear-gradient(225deg, rgba(255, 95, 109, 1), rgba(255, 176, 137, 1));
+} */
+
+.nikeCarousel .carousel-caption {
+    width:90%;
+    color: #111;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    bottom: auto;
+    text-align: left;
+}
+.nikeCarousel .carousel-caption row{
+    width:100%;
+}
+.nikeCarousel__info {
+    background-color: #fff;
+    border-radius: 15px;
+    /* box-shadow: 0 0 50px rgb(0 0 0 / 15%); */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.nikeCarousel__title{
+    display: flex;
+    justify-content: space-between;
+}
+.nikeCarousel__title h1 {
+    /* color: #111; */
+    font-size: 48px;
+}
+
+.nikeCarousel__title h1 p:first-child {
+    color: rgb(255, 95, 109);
+    margin-bottom: 0;
+}
+.nikeCarousel__title > p{
+    font-size: 32px;
+}
+
+.nikeCarousel__info > p {
+    color: #757575;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.nikeCarousel__sizeGroup{
+    margin-bottom: 0.5rem;
+}
+
+.nikeCarousel__shoes {
+    padding: 30px 75px 30px 0;
+    position: relative;
+}
+.nikeCarousel__imgLarge{
+    width:90%;
+    position: absolute;
+    z-index: 10;
+    left: 20%;
+    bottom: 10%;
+    display: block;
+}
+
+.nikeCarousel__imgSmall{
+    display: none;
+   
+}
+.nikeCarousel__imgLarge img,.nikeCarousel__imgSmall img {    
+    transform: rotate(340deg) translateY(-20%);
+    filter: drop-shadow(0px 6px 7px rgba(34, 34, 34, 0.9)) brightness(110%) saturate(150%);
+}
+
+/* .nikeCarousel__shoes > img {
+    width:90%;
+    position: absolute;
+    z-index: 10;
+    left: calc(20% + 20px);
+    bottom: 10%;   
+    transform: rotate(-35deg) translate(0,-50%);
+    filter: drop-shadow(0px 6px 7px rgba(34, 34, 34, 0.9)) brightness(110%) saturate(150%);
+} */
+
+.nikeCarousel__glass {
+    
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 0 12px 12px 0;
+    color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.nikeCarousel__gallery {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nikeCarousel__gallery .nikeCarousel__img img {
+    height: auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    border-radius: 12px;
+   
+    /* margin: 5px 0; */
+    transition: .5s;
+}
+
+.nikeCarousel__gallery .nikeCarousel__img:hover img{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.nikeCarousel__sizeGroup .form-check-input, .nikeCarousel__color .form-check-input{
+    display: none;
+}
+.nikeCarousel__sizeGroup .form-check-label{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border:2px solid #bdc3c7;
+    color: #bdc3c7;
+    border-radius: 50%;
+    font-weight: 700;
+    transition: all .5s;
+}
+.nikeCarousel__sizeGroup .form-check-label:hover{
+    border-color:#111 ;
+    color: #111;
+}
+
+.nikeCarousel__sizeGroup .form-check-input:checked ~ .form-check-label{
+    border-color:#111;
+    color: #111;
+}
+
+.nikeCarousel__color .form-check-label{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: rgba(189, 195, 199, 0.5);
+    border: 2px solid transparent;
+    transition: all .5s;
+}
+.nikeCarousel__color .form-check-label:hover{
+    border-color: #111;
+}
+
+.nikeCarousel__color .form-check-input:checked ~ .form-check-label{
+    border-color: #111;
+}
+
+.nikeCarousel__color .form-check-label::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.nikeCarousel__color .form-check:first-child .form-check-label:before{
+    background-color: #fec60f;
+}
+
+.nikeCarousel__color .form-check:nth-child(2) .form-check-label:before{
+    background-color: #2a2f40;
+}
+.nikeCarousel__color .form-check:last-of-type .form-check-label:before{
+    background-color: #02a2ca;
+}
+/* RESPONSIVE */
+
+
+@media screen and (max-width:1200px){
+    .nikeCarousel__title h1 {
+        /* color: #111; */
+        font-size: 3vw;
+    }
+
+    .nikeCarousel__title > p{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:992px){
+    .nikeCarousel .carousel-caption{
+        top:50%;
+    }
+    .nikeCarousel__gallery{
+        width:25%;
+    }
+    .nikeCarousel__imgLarge {     
+        width: 80%;
+        left: calc(25% + 20px);
+        bottom: 25%;
+    }
+    .nikeCarousel__title h1 {
+        /* color: #111; */
+        font-size: 2.8vw;
+    }
+
+    .nikeCarousel__title > p{
+        font-size: 2.8vw;
+    }
+   
+}
+
+@media screen and (max-width:768px){
+    .nikeCarousel .carousel-caption{
+        width:100%;
+        top:55%;
+    }
+    .nikeCarousel .carousel-caption .col-md-6{
+        max-width: 100%;
+    }
+    .nikeCarousel .carousel-caption .row{
+        flex-direction: column-reverse;
+        width:100%;
+        margin: 0;
+    }
+    .nikeCarousel__gallery{
+        flex-direction: row;
+        width: 100%;
+    }
+    .nikeCarousel__img{
+        width:20%;
+        padding: 10px;
+    }
+    .nikeCarousel__imgLarge{
+        display: none;
+    }
+    .nikeCarousel__imgSmall{
+        display: block;
+        width:60%;
+        margin: auto;
+    }
+    .nikeCarousel__shoes{
+        padding: 0;
+    }
+    .nikeCarousel__glass{
+        padding: 0;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        backdrop-filter: blur(0px);
+    }
+    .nikeCarousel__info{
+        padding: 15px 30px;
+        border-radius: 0;
+    }
+
+    .nikeCarousel__title > p{
+        font-size: 3vw;
+    }
+    .nikeCarousel__info p{
+        margin-bottom: 0;
+    }
+    .nikeCarousel__info > p{
+        font-size: 2vw;
+    }
+
+    .carousel-indicators{
+        display: none;
+    }
+}
+
+@media  screen and (max-width:576px) {
+    
+    .nikeCarousel .carousel-caption{
+        top:55vh;
+        width:75%;
+    }
+    .nikeCarousel__title > p{
+        font-size: 3.5vw;
+    }
+    .nikeCarousel__title h1 {
+        /* color: #111; */
+        font-size: 3.5vw;
+    }
+    .nikeCarousel__info > p{
+        font-size: 2.5vw;
+    }
+    .nikeCarousel__sizeGroup .form-check-label{
+        width: 25px;
+        height: 25px;
+        line-height: 20px;
+        font-size: 13px;
+    }
+    .nikeCarousel__color .form-check-label{
+        width: 25px;
+        height: 25px;
+    }
+    .nikeCarousel__sizeGroup .form-check,.nikeCarousel__color .form-check{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-height:540px){
+    .nikeCarousel .carousel-caption{
+        top:50%;
+        
+    }
+    .nikeCarousel .carousel-item{
+        height:800px;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+}
+/* KEYFRAMES */
+.bounce {
+	animation-name: bounce;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	} 50% {
+		transform: translateY(-50px);
+	} 100% {
+		transform: translateY(0);
+	}
+}
+
+.left-to-right{
+    animation: leftToRight 1s linear;
+}
+.right-to-left{
+    animation: rightToleft 1s linear;
+  
+}
+.bottom-up{
+    animation: bottomUp 1s linear;
+}
+.delayAnimation-2{
+    animation-delay: .2s;
+}
+.delayAnimation-4{
+    animation-delay: .4s;
+}
+.delayAnimation-6{
+    animation-delay: .6s;
+}
+.delayAnimation-8{
+    animation-delay: .8s;
+}
+
+
+
+@keyframes leftToRight {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightToleft {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bottomUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
