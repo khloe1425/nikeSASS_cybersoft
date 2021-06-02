@@ -190,8 +190,16 @@ body {
     font-size: 48px;
 }
 
-.nikeCarousel__title h1 p:first-child {
+.nikeCarousel .carousel-item:first-child .nikeCarousel__title h1 p:first-child {
     color: rgb(255, 95, 109);
+    margin-bottom: 0;
+}
+.nikeCarousel .carousel-item:nth-child(2) .nikeCarousel__title h1 p:first-child {
+    color: rgb(99, 155, 48);
+    margin-bottom: 0;
+}
+.nikeCarousel .carousel-item:nth-child(3) .nikeCarousel__title h1 p:first-child {
+    color: #4765ad;
     margin-bottom: 0;
 }
 .nikeCarousel__title > p{
